@@ -6,20 +6,6 @@ Flex processing lowers cost for supported OpenAI models in exchange for slower r
 
 ## Install
 
-From GitHub:
-
-```bash
-pi install git:github.com/laxman-patel/pi-flex-processing
-```
-
-Or try it for one run without installing:
-
-```bash
-pi -e git:github.com/laxman-patel/pi-flex-processing
-```
-
-After this package is published to npm / listed in the pi package gallery:
-
 ```bash
 pi install npm:pi-flex-processing
 ```
