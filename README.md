@@ -56,6 +56,22 @@ When flex mode is enabled on an unsupported OpenAI model, the extension warns on
 - Normal mode: sends `service_tier: "default"`.
 - The selected mode is persisted in the current pi session.
 
+## Publishing
+
+This repo publishes to npm through GitHub Actions when a version tag is pushed.
+
+One-time setup: add an npm automation token as the GitHub repository secret `NPM_TOKEN`.
+
+Release flow:
+
+```bash
+npm version patch
+npm pack --dry-run
+git push --follow-tags
+```
+
+The pushed `vX.Y.Z` tag triggers `.github/workflows/publish.yml`, verifies the tag matches `package.json`, and runs `npm publish --access public --provenance`.
+
 ## Package metadata
 
 This repo is structured as a pi package:
