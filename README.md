@@ -58,9 +58,9 @@ When flex mode is enabled on an unsupported OpenAI model, the extension warns on
 
 ## Publishing
 
-This repo publishes to npm through GitHub Actions when a version tag is pushed.
+This repo publishes to npm through GitHub Actions and npm Trusted Publishing when a version tag is pushed.
 
-One-time setup: add an npm automation token as the GitHub repository secret `NPM_TOKEN`.
+One-time setup: configure npm Trusted Publishing for this package with GitHub Actions, repository `laxman-patel/pi-flex-processing`, workflow filename `publish.yml`, and no environment name.
 
 Release flow:
 
@@ -70,7 +70,7 @@ npm pack --dry-run
 git push --follow-tags
 ```
 
-The pushed `vX.Y.Z` tag triggers `.github/workflows/publish.yml`, verifies the tag matches `package.json`, and runs `npm publish --access public --provenance`.
+The pushed `vX.Y.Z` tag triggers `.github/workflows/publish.yml`, verifies the tag matches `package.json`, and runs `npm publish --access public` via OIDC trusted publishing.
 
 ## Package metadata
 
