@@ -1,6 +1,6 @@
 {
   "name": "pi-flex-processing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pi extension to switch OpenAI API requests between normal and Flex processing from chat UI.",
   "license": "MIT",
   "type": "module",
