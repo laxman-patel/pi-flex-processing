@@ -1,0 +1,35 @@
+{
+  "name": "pi-flex-processing",
+  "version": "0.1.0",
+  "description": "Pi extension to switch OpenAI API requests between normal and Flex processing from chat UI.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "openai",
+    "flex-processing",
+    "service-tier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laxman-patel/pi-flex-processing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/laxman-patel/pi-flex-processing/issues"
+  },
+  "homepage": "https://github.com/laxman-patel/pi-flex-processing#readme",
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/openai-flex.ts"
+    ]
+  }
+}
